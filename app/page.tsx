@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Users, Zap, Globe, TrendingUp } from "lucide-react";
 import Tascon from '@/public/images/icon.png';
 import { HeroSection } from "./components/Herosection";
+import { MaxpoExhibition } from "./components/MaxpoExhibition";
 
 export default function Home() {
   const structuredData = {
@@ -49,6 +50,8 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
 
+
+
       {/* Organizer Section */}
       <section className="py-16 border-t border-gray-200 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-6 md:px-12 lg:px-20">
@@ -73,6 +76,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <MaxpoExhibition />
 
       {/* About the Summit Section */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">

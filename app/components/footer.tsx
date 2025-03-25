@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from "lucide-react"
+import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, Youtube } from "lucide-react"
 
 const footerLinks = [
   { title: "About", href: "/about" },
@@ -24,6 +24,7 @@ const socialLinks = [
   { icon: Twitter, href: "https://x.com/tasconmedia" },
   { icon: Linkedin, href:"https://www.linkedin.com/company/tascon-media/" },
   { icon: Instagram, href:"https://www.instagram.com/tasconmedia/" },
+  { icon: Youtube, href:"https://www.youtube.com/channel/UC25vYRe7OFq30mwLAit5O4A" },
 ]
 
 export function Footer() {

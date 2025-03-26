@@ -20,6 +20,7 @@ import img15 from '@/public/images/speakers/S K Joo.jpg'
 import img16 from '@/public/images/speakers/Ts.Izzat.jpg'
 import img17 from '@/public/images/speakers/Ts Tengku.jpg'
 import img18 from '@/public/images/speakers/Farouk Abdullah.jpg'
+import img19 from '@/public/images/speakers/Artboard 7(1).jpg'
 
 
 
@@ -183,7 +184,16 @@ const speakers: Speaker[] = [
     imageUrl: img18,
     bio: "Farouk Abdullah is a Chief Digital Officer at KHIND Malaysia.",
     social: {},
+  },
+  {
+    name: "Dato' Dr Amirudin Abdul Wahab",
+    jobTitle: "CEO",
+    organization: "CyberSecurity Malaysia",
+    imageUrl: img19,
+    bio: "DATO' Ts. DR HAJI AMIRUDIN ABDUL WAHAB is the Chief Executive Officer of CyberSecurity Malaysia, a cybersecurity specialist and technical agency that monitors e-sovereignty of the country. ",
+    social: {},
   }
+
 ]
 
 

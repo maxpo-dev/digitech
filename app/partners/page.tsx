@@ -1,25 +1,39 @@
-// import Link from "next/link"
 import PartnershipEnquiryForm from "@/app/partners/PartnershipEnquiryForm";
 import OurMediaPartners from "./mediaPartners";
+import GovSupportingPartner from "./supportingPartner";
+import AssociationPartner from "./associationPartner";
 
 export default function PartnersPage() {
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-400 to-purple-400 py-12 px-6 sm:px-10 lg:px-16">
       <div className="max-w-7xl mx-auto">
-        {/* <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-12">
-           Partners 
-        </h1> */}
         
-         <section className="mb-16">
-        <OurMediaPartners />
-        </section>
-        {/* <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Partners</h2>
-          <div className="bg-white shadow-lg rounded-xl p-8 flex items-center justify-center">
-            <p className="text-xl text-gray-500 font-medium">To Be Announced</p>
-          </div>
-        </section> */}
+        {/* Partner Section Inside a Card */}
+        <section className="mb-16">
+          <div className="bg-white shadow-lg rounded-xl p-8">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Our Partners</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+              
+              {/* Gov Supporting Partner */}
+              <div className="flex flex-col items-center text-center p-6 bg-gray-50 shadow-md rounded-lg">
+                <GovSupportingPartner />
+              </div>
 
+              {/* Association Partner */}
+              <div className="flex flex-col items-center text-center p-6 bg-gray-50 shadow-md rounded-lg">
+                <AssociationPartner />
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* Media Partners */}
+        <section className="mb-16">
+          <OurMediaPartners />
+        </section>
+
+        {/* Why Partner With Us */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">Why Partner With Us?</h2>
           <div className="bg-white shadow-lg rounded-xl p-8">
@@ -38,6 +52,7 @@ export default function PartnersPage() {
           </div>
         </section>
 
+        {/* Key Technologies Showcased */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">Key Technologies Showcased</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -75,6 +90,7 @@ export default function PartnersPage() {
           </div>
         </section>
 
+        {/* Partnership Enquiry */}
         <section className="mt-16">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">Partnership Enquiry</h2>
           <div className="bg-white shadow-lg rounded-xl p-8">

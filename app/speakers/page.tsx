@@ -6,7 +6,7 @@ import img2 from "@/public/images/speakers/Ts. Ahmad Fauzi Masrom - LEMBAGA TABU
 import img3 from "@/public/images/speakers/Rajesh Grover - Kanmo Group.jpg"
 import img4 from "@/public/images/speakers/James Thang.png"
 import img5 from "@/public/images/speakers/Angie Teh Sook Mei - Skynet Worldwide (M) Sdn Bhd.jpg"
-// import img6 from "@/public/images/speakers/Heru Sutadi - Indonesian ICT Institute.jpg."
+// import img6 from "@/public/images/speakers/Heru Sutadi - Indonesian ICT Institute.jpg"
 import img6 from "@/public/images/speakers/WhatsApp Image 2025-01-30 at 6.03.22 PM.jpeg"
 import img7 from "@/public/images/speakers/WhatsApp Image 2025-01-30 at 6.04.49 PM.jpeg"
 import img8 from "@/public/images/speakers/Aaron Lee - ANKH.jpg"

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Association from '@/public/images/partners/IASA Logo White BG (1).jpeg';
+import Association from '@/public/images/partners/IASA Logo White BG (1).png';
 
 const AssociationPartner = () => {
   return (

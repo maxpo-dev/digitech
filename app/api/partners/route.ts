@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
     });
 
     const mailOptions = {
-      from: "chvamshi03@gmail.com",
+      from: "Digitech<chvamshi03@gmail.com>",
       to: " tarannum.s@tasconmedia.com, info@tasconmedia.com, digital.maxpo@gmail.com, praveen.maxpo@gmail.com",
       subject: "New Partnership Enquiry",
       text: `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nMessage: ${message}`,

@@ -18,7 +18,7 @@ export async function POST(req: Request) {
     })
 
     const mailOptions = {
-      from: "chvamshi03@gmail.com",
+      from: "Digitech<chvamshi03@gmail.com>",
       to: "digital.maxpo@gmail.com, tarannum.s@tasconmedia.com, digital.maxpo@gmail.com, praveen.maxpo@gmail.com",
       subject: "New Brochure Request",
       text: `A new brochure request was made by: ${email}`,

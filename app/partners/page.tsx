@@ -10,20 +10,15 @@ export default function PartnersPage() {
         
         {/* Partner Section Inside a Card */}
         <section className="mb-16">
-          <div className="bg-white shadow-lg rounded-xl p-8">
+          <div className=" rounded-xl p-8">
             <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Our Partners</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div className="flex flex-col space-y-10 items-center">
               
               {/* Gov Supporting Partner */}
-              <div className="flex flex-col items-center text-center p-6 bg-gray-50 shadow-md rounded-lg">
-                <GovSupportingPartner />
-              </div>
+              <GovSupportingPartner />
 
               {/* Association Partner */}
-              <div className="flex flex-col items-center text-center p-6 bg-gray-50 shadow-md rounded-lg">
-                <AssociationPartner />
-              </div>
-
+              <AssociationPartner />
             </div>
           </div>
         </section>

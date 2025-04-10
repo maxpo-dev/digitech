@@ -3,31 +3,43 @@ import nodemailer from "nodemailer"
 
 export async function POST(req: Request) {
   try {
-    const { email } = await req.json()
+    const {
+      name,
+      designation,
+      email,
+      country,
+      phone,
+      interestedIn,
+      message,
+    } = await req.json()
 
-    if (!email || typeof email !== "string") {
-      return NextResponse.json({ error: "Invalid email" }, { status: 400 })
+    if (!name || !designation || !email || !country || !phone || !interestedIn || !message) {
+      return NextResponse.json({ error: "Missing required fields" }, { status: 400 })
     }
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
         user: "chvamshi03@gmail.com",
-        pass: "zfie hmte iyxt wyto", // ⚠️ Don't expose credentials! Use environment variables instead.
+        pass: "zfie hmte iyxt wyto", // 🔐 Store this in .env in production!
       },
     })
 
     const mailOptions = {
       from: "Digitech<chvamshi03@gmail.com>",
-      to: "digital.maxpo@gmail.com, tarannum.s@tasconmedia.com, digital.maxpo@gmail.com, praveen.maxpo@gmail.com",
-      subject: "New Brochure Request",
-      text: `A new brochure request was made by: ${email}`,
-      // attachments: [
-      //   {
-      //     filename: "brochure.pdf",
-      //     path: "./public/brochure.pdf", // Ensure the file exists in this path
-      //   },
-      // ],
+      to: "digital.maxpo@gmail.com, tarannum.s@tasconmedia.com, praveen.maxpo@gmail.com",
+      subject: "New Brochure & Agenda Request",
+      text: `
+New Brochure Request:
+
+Name: ${name}
+Designation: ${designation}
+Email: ${email}
+Country: ${country}
+Phone No: ${phone}
+Interested In: ${interestedIn}
+Message: ${message}
+      `,
     }
 
     await transporter.sendMail(mailOptions)

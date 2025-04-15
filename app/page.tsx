@@ -77,7 +77,7 @@ export default function Home() {
         </div>
       </section>
 
-      <MaxpoExhibition />
+      
 
       {/* About the Summit Section */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
@@ -134,6 +134,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
+      <MaxpoExhibition />
     </main>
   );
 }

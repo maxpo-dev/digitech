@@ -54,6 +54,7 @@ export default function PartnershipEnquiryForm() {
     <div className="bg-white shadow sm:rounded-lg">
       <form onSubmit={handleSubmit} className="space-y-6 p-6">
         <div>
+          <center><h3>Enquiry Form </h3></center>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700">
             Name
           </label>

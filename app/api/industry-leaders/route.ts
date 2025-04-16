@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     // Email content
     const mailOptions = {
       from: "Digitech<chvamshi03@gmail.com>",
-      to: "info@tasconmedia.com, tarannum.s@tasconmedia.com, digital.maxpo@gmail.com, praveen.maxpo@gmail.com",
+      to: "info@tasconmedia.com, tarannum.s@tasconmedia.com, digital.maxpo@gmail.com, praveen.maxpo@gmail.com,askarali.maxpo@gmail.com",
       subject: "New Enquiry from DIGITECH Contact Form",
       html: `
         <h1>Industry Leaders & Enterprises</h1>

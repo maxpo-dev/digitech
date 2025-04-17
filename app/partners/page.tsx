@@ -10,38 +10,40 @@ export default function PartnersPage() {
       <div className="max-w-7xl mx-auto space-y-24">
 
         {/* Our Partners Section */}
-        <section>
+       {/* Our Partners Section */}
+<section>
   <div className="max-w-7xl mx-auto bg-white rounded-lg border border-gray-200 p-10 shadow-sm">
     <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">Our Partners</h2>
-    <div className="flex flex-col lg:flex-row gap-12">
-      {/* Left: Partner Logos */}
-      <div className="flex-1 space-y-12">
-      <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 flex justify-center items-center">
-  <NetworkingPartner />
-</div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-  <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-    <GovSupportingPartner />
-  </div>
-</div>
-
-
-      {/* Right: Partnership Form */}
-      <div className="flex-1">
-        <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 h-half">
-          <h3 className="text-xl font-semibold text-gray-700 mb-6">Become a Partner</h3>
-          <PartnershipEnquiryForm />
-          
+      {/* Networking Partner Card */}
+      <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition duration-300 flex items-center justify-center min-h-[300px]">
+        <div className="text-center w-full">
+          {/* <h3 className="text-xl font-semibold text-gray-700 mb-4">Networking Partner</h3> */}
+          <NetworkingPartner />
         </div>
-        <div className="mt-8 bg-gray-50 border border-gray-200 rounded-lg p-6 flex justify-center items-center">
-  <AssociationPartner />
-</div>
-
-
       </div>
+
+      {/* Association Partner Card */}
+      <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition duration-300 flex items-center justify-center min-h-[300px]">
+        <div className="text-center w-full">
+          {/* <h3 className="text-xl font-semibold text-gray-700 mb-4">Association Partner</h3> */}
+          <AssociationPartner />
+        </div>
+      </div>
+
+      {/* Government Supporting Partner Card */}
+      <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition duration-300 flex items-center justify-center min-h-[300px]">
+        <div className="text-center w-full">
+          {/* <h3 className="text-xl font-semibold text-gray-700 mb-4">Government Supporting Partner</h3> */}
+          <GovSupportingPartner />
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
 
 <section>
   <div className="max-w-7xl mx-auto bg-white rounded-lg border border-gray-200 p-10 shadow-sm">
@@ -68,6 +70,14 @@ export default function PartnersPage() {
             </ul>
           </div>
         </section>
+
+
+
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 h-half">
+          <h3 className="text-xl font-semibold text-gray-700 mb-6">Become a Partner</h3>
+          <PartnershipEnquiryForm />
+          
+        </div>
 
         {/* Key Technologies Showcased Section */}
         <section>

@@ -8,10 +8,11 @@ export default function PartnershipEnquiryForm() {
     email: "",
     company: "",
     message: "",
+    partnerType: "", // New field
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
@@ -53,63 +54,80 @@ export default function PartnershipEnquiryForm() {
   return (
     <div className="bg-white shadow sm:rounded-lg">
       <form onSubmit={handleSubmit} className="space-y-6 p-6">
+        <center><h3>Enquiry Form</h3></center>
+
         <div>
-          <center><h3>Enquiry Form </h3></center>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-            Name
-          </label>
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
           <input
             type="text"
             name="name"
             id="name"
             required
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             value={formData.name}
             onChange={handleChange}
+            className="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
           />
         </div>
+
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-            Email
-          </label>
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
           <input
             type="email"
             name="email"
             id="email"
             required
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             value={formData.email}
             onChange={handleChange}
+            className="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
           />
         </div>
+
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-gray-700">
-            Company
-          </label>
+          <label htmlFor="company" className="block text-sm font-medium text-gray-700">Company</label>
           <input
             type="text"
             name="company"
             id="company"
             required
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             value={formData.company}
             onChange={handleChange}
+            className="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
           />
         </div>
+
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-            Message
-          </label>
+          <label htmlFor="partnerType" className="block text-sm font-medium text-gray-700">Type of Partner</label>
+          <select
+            name="partnerType"
+            id="partnerType"
+            required
+            value={formData.partnerType}
+            onChange={handleChange}
+            className="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 shadow-sm bg-white focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          >
+            <option value="" disabled>Select partner type</option>
+            <option value="Networking Partner">Networking Partner</option>
+            <option value="Media Partner">Media Partner</option>
+            <option value="Community Partner">Community Partner</option>
+            <option value="Associated Partner">Associated Partner</option>
+            <option value="Supporting Partner">Supporting Partner</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
           <textarea
             name="message"
             id="message"
             rows={4}
             required
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             value={formData.message}
             onChange={handleChange}
+            className="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
           ></textarea>
         </div>
+
         <div>
           <button
             type="submit"

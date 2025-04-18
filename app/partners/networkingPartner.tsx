@@ -1,5 +1,5 @@
 import Image from "next/image";
-import KissflowLogo from '@/public/images/partners/kissflow.png';
+import KissflowLogo from "@/public/images/partners/kissflow.png";
 
 const networkingPartners = [
   {
@@ -13,9 +13,7 @@ const networkingPartners = [
 
 const NetworkingPartner = () => {
   return (
-    <div className="py-10 text-black">
-      <h2 className="text-3xl font-bold text-center mb-16">Our Networking Partner</h2>
-
+    <div className="py-6 text-navy-900">
       <div className="flex justify-center">
         {networkingPartners.map((partner) => (
           <a
@@ -23,7 +21,7 @@ const NetworkingPartner = () => {
             href={partner.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white p-6 rounded-lg shadow hover:shadow-xl transition duration-300 w-full max-w-md"
+            className="bg-ivory-100 p-5 rounded-xl shadow-sm hover:shadow-md hover:scale-102 transition-all duration-500 w-full max-w-xs border border-gold-200"
           >
             <div className="flex flex-col items-center text-center">
               <Image
@@ -31,9 +29,9 @@ const NetworkingPartner = () => {
                 alt={partner.name}
                 width={200}
                 height={100}
-                className="object-contain mb-4"
+                className="object-contain mb-4 transition-transform duration-500 hover:scale-110"
               />
-              <p className="text-sm text-gray-700">{partner.description}</p>
+              <p className="text-sm text-navy-700 leading-relaxed font-sans">{partner.description}</p>
             </div>
           </a>
         ))}

@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/footer";
+import { AOSInit } from "./components/AOSInit";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,6 +54,9 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         {/* End Google Tag Manager (noscript) */}
+
+         {/* GTM noscript here */}
+         <AOSInit /> {/* 👈 initialize AOS here */}
 
         <Navbar />
         {children}

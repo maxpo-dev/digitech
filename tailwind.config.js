@@ -12,20 +12,3 @@ module.exports = {
   plugins: [],
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

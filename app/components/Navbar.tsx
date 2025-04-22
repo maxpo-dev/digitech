@@ -14,7 +14,7 @@ const navItems = [
   { name: "Delegates", href: "/delegates" },
   { name: "Contact", href: "/contact" },
   { name: "Awards", href: "/awards" },
-  { name: "Blogs", href: "/blogs" },
+  // { name: "Blogs", href: "/blogs" },
   
 ];
 

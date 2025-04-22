@@ -6,56 +6,45 @@ import NetworkingPartner from "./networkingPartner";
 
 export default function PartnersPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-400 to-purple-400 py-12 px-6 sm:px-10 lg:px-16">
-      <div className="max-w-7xl mx-auto space-y-24">
+    <div className="min-h-screen bg-gradient-to-r from-blue-400 to-purple-400 py-10 px-4 sm:px-6 lg:px-16">
+      <div className="max-w-7xl mx-auto space-y-20">
+        {/* Our Partners */}
+        <section data-aos="fade-up">
+          <div className="bg-white rounded-3xl border border-gray-200 p-6 sm:p-10 shadow-md">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-10">Our Partners</h2>
+            <div className="grid grid-cols-1 gap-6 sm:gap-10">
+              {/* Government Supporting Partner */}
+              <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
+                <h3 className="text-xl font-semibold text-gray-700 mb-4">Government Supporting Partner</h3>
+                <GovSupportingPartner />
+              </div>
 
-        {/* Our Partners Section */}
-       {/* Our Partners Section */}
-<section>
-  <div className="max-w-7xl mx-auto bg-white rounded-lg border border-gray-200 p-10 shadow-sm">
-    <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">Our Partners</h2>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Networking Partner */}
+              <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
+                <h3 className="text-xl font-semibold text-gray-700 mb-4">Networking Partner</h3>
+                <NetworkingPartner />
+              </div>
 
-      {/* Networking Partner Card */}
-      <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition duration-300 flex items-center justify-center min-h-[300px]">
-        <div className="text-center w-full">
-          {/* <h3 className="text-xl font-semibold text-gray-700 mb-4">Networking Partner</h3> */}
-          <NetworkingPartner />
-        </div>
-      </div>
+              {/* Association Partner */}
+              <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
+                <h3 className="text-xl font-semibold text-gray-700 mb-4">Association Partner</h3>
+                <AssociationPartner />
+              </div>
+            </div>
+          </div>
+        </section>
 
-      {/* Association Partner Card */}
-      <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition duration-300 flex items-center justify-center min-h-[300px]">
-        <div className="text-center w-full">
-          {/* <h3 className="text-xl font-semibold text-gray-700 mb-4">Association Partner</h3> */}
-          <AssociationPartner />
-        </div>
-      </div>
+        {/* Media Partners */}
+        <section data-aos="fade-up">
+          <div className="bg-white rounded-3xl border border-gray-200 p-6 sm:p-10 shadow-md">
+            <OurMediaPartners />
+          </div>
+        </section>
 
-      {/* Government Supporting Partner Card */}
-      <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition duration-300 flex items-center justify-center min-h-[300px]">
-        <div className="text-center w-full">
-          {/* <h3 className="text-xl font-semibold text-gray-700 mb-4">Government Supporting Partner</h3> */}
-          <GovSupportingPartner />
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<section>
-  <div className="max-w-7xl mx-auto bg-white rounded-lg border border-gray-200 p-10 shadow-sm">
-    <OurMediaPartners />
-  </div>
-</section>
-
-
-        {/* Why Partner With Us Section */}
-        <section>
-          <div className="bg-white rounded-lg border border-gray-200 p-10 shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Why Partner With Us?</h2>
+        {/* Why Partner With Us */}
+        <section data-aos="fade-up">
+          <div className="bg-white rounded-3xl border border-gray-200 p-6 sm:p-10 shadow-md">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">Why Partner With Us?</h2>
             <ul className="list-disc list-inside text-gray-700 space-y-3 text-base">
               <li>Showcase your brand to a global audience of tech leaders and innovators.</li>
               <li>Connect with potential clients and partners in the digital technology sector.</li>
@@ -71,19 +60,19 @@ export default function PartnersPage() {
           </div>
         </section>
 
+        {/* Become a Partner Form */}
+        <section data-aos="fade-up">
+          <div className="bg-white rounded-3xl border border-gray-200 p-6 sm:p-10 shadow-md">
+            <h3 className="text-xl sm:text-2xl font-semibold text-gray-700 mb-6">Become a Partner</h3>
+            <PartnershipEnquiryForm />
+          </div>
+        </section>
 
-
-        <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 h-half">
-          <h3 className="text-xl font-semibold text-gray-700 mb-6">Become a Partner</h3>
-          <PartnershipEnquiryForm />
-          
-        </div>
-
-        {/* Key Technologies Showcased Section */}
-        <section>
-          <div className="bg-white rounded-lg border border-gray-200 p-10 shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Key Technologies Showcased</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Key Technologies */}
+        <section data-aos="fade-up">
+          <div className="bg-white rounded-3xl border border-gray-200 p-6 sm:p-10 shadow-md">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">Key Technologies Showcased</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
                   title: "Enterprise Solutions",
@@ -106,7 +95,7 @@ export default function PartnersPage() {
                   items: ["IoT Devices", "Satellite Communications", "Autonomous Systems", "Robotics and Automation"],
                 },
               ].map((tech, index) => (
-                <div key={index} className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+                <div key={index} className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
                   <h3 className="text-lg font-semibold text-gray-800 mb-4">{tech.title}</h3>
                   <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm">
                     {tech.items.map((item, idx) => (
@@ -118,7 +107,6 @@ export default function PartnersPage() {
             </div>
           </div>
         </section>
-
       </div>
     </div>
   );

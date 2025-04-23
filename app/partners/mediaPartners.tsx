@@ -16,14 +16,14 @@ const OurMediaPartners = () => {
   return (
     <div className="py-10 text-black ">
       <h2 className="text-3xl font-bold text-center mb-16">Our Media Partners</h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto ">
         {mediaPartners.map((partner) => (
           <a
             key={partner.name}
             href={partner.link}
-            target="_blank"                                                   
+            target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center p-4 rounded-lg bg-white hover:shadow-lg transition"
+            className="flex flex-col items-center p-4 rounded-lg bg-white hover:shadow-lg transition border border-black"
           >
             <Image
               src={partner.logo}

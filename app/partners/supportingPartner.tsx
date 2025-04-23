@@ -8,7 +8,7 @@ const GovSupportingPartner: React.FC = () => {
       <div className="flex flex-col sm:flex-row items-center gap-8">
         {/* mosti Image */}
         <div
-          className="flex flex-col items-center justify-center bg-ivory-100 p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-102 transition-all duration-500 border border-gold-200 h-64"
+          className="flex flex-col items-center justify-center bg-ivory-100 p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-102 transition-all duration-500 border border-black h-64"
         >
           <Image
             src={mosti}
@@ -20,7 +20,7 @@ const GovSupportingPartner: React.FC = () => {
         </div>
         {/* CSM Image */}
         <div
-          className="flex flex-col items-center justify-center bg-ivory-100 p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-102 transition-all duration-500 border border-gold-200 h-64"
+          className="flex flex-col items-center justify-center bg-ivory-100 p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-102 transition-all duration-500 border border-black h-64"
         >
           <Image
             src={CSM}

@@ -15,13 +15,13 @@ export default function PartnersPage() {
             <div className="grid grid-cols-1 gap-6 sm:gap-10">
               {/* Government Supporting Partner */}
               <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
-                <h3 className="text-xl font-semibold text-gray-700 mb-4">Government Supporting Partner</h3>
+                <h3 className="text-xl font-semibold text-gray-700 mb-4">Government Supporting Partners</h3>
                 <GovSupportingPartner />
               </div>
 
               {/* Networking Partner */}
               <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
-                <h3 className="text-xl font-semibold text-gray-700 mb-4">Networking Partner</h3>
+                <h3 className="text-xl font-semibold text-gray-700 mb-4">Networking Partners</h3>
                 <NetworkingPartner />
               </div>
 

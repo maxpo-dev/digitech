@@ -7,7 +7,7 @@ const NetworkingPartner: React.FC = () => {
     <div className="w-full max-w-lg text-navy-900 flex flex-col items-center space-y-4">
       <div className="flex flex-col sm:flex-row items-center gap-8">
         {/* Kissflow Image */}
-        <div className="flex flex-col items-center justify-center bg-ivory-100 p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-102 transition-all duration-500 border border-gold-200 h-64">
+        <div className="flex flex-col items-center justify-center bg-ivory-100 p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-102 transition-all duration-500 border border-black h-64">
           <Image
             src={KissflowLogo}
             alt="Kissflow - Networking Partner"
@@ -17,7 +17,7 @@ const NetworkingPartner: React.FC = () => {
           />
         </div>
         {/* Kraft Image */}
-        <div className="flex flex-col items-center justify-center bg-ivory-100 p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-102 transition-all duration-500 border border-gold-200 h-64">
+        <div className="flex flex-col items-center justify-center bg-ivory-100 p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-102 transition-all duration-500 border border-black h-64">
           <Image
             src={kraft}
             alt="Kraft - Networking Partner"

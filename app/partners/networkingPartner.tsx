@@ -27,7 +27,7 @@ const NetworkingPartner: React.FC = () => {
             className="object-contain cursor-pointer hover:scale-110 transition-transform duration-500"
           />
         </div>
-        {/* ConvergentDS */}
+        {/* ConvergentDS .*/}
         <div className="flex items-center justify-center bg-ivory-100 p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-102 transition-all duration-500 border border-black h-64">
           <Image
             src={ConvergentDS}

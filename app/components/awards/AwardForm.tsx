@@ -8,7 +8,7 @@ const AwardForm: React.FC = () => {
     email: "",
     organization: "",
     nominationDetails: "",
-    acceptedTerms: false,
+    acceptedTerms: true,
   });
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState("");
@@ -153,7 +153,7 @@ const AwardForm: React.FC = () => {
             />
             <label htmlFor="acceptedTerms" className="text-gray-700">
               I agree to the{" "}
-              <a href="/terms" className="text-blue-600 underline">
+              <a href="/policy" className="text-blue-600 underline">
                 Terms and Conditions
               </a>
             </label>

@@ -205,7 +205,7 @@ export default function ContactPage() {
               </div>
               <div className="sm:col-span-2">
                 <dt className="text-sm font-medium text-gray-500">Event Address</dt>
-                <dd className="mt-1 text-sm text-gray-900">Dubai, UAE</dd>
+                <dd className="mt-1 text-sm text-gray-900">Malaysia</dd>
               </div>
             </dl>
           </div>

@@ -152,7 +152,7 @@ export default function BrochureRequestPage() {
             />
             <label className="text-lg text-gray-700">
               I confirm that I have read, understand and accept the{" "}
-              <a href="/policy" className="text-blue-600 underline" target="_blank">
+              <a href="https://www.maxpo.ae/privacy" className="text-blue-600 underline" target="_blank">
                 Terms & Conditions and Privacy Policy
               </a>{" "}
               of Future Digitech Summit.

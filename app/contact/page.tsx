@@ -156,7 +156,7 @@ export default function ContactPage() {
               className="h-4 w-4 mt-1 text-indigo-600 border-gray-300 rounded"
             />
             <label htmlFor="termsAccepted" className="text-sm text-gray-700">
-              I confirm that I have read, understand and accept the Terms & Conditions and <a href="/policy" className="text-indigo-600 underline">Privacy Policy</a> of FutureDigiTechSummit.
+              I confirm that I have read, understand and accept the Terms & Conditions and <a href="https://www.maxpo.ae/privacy" className="text-indigo-600 underline">Privacy Policy</a> of Future DigiTech Summit.
             </label>
           </div>
 
@@ -170,7 +170,7 @@ export default function ContactPage() {
               className="h-4 w-4 mt-1 text-indigo-600 border-gray-300 rounded"
             />
             <label htmlFor="marketingConsent" className="text-sm text-gray-700">
-              I agree to allow FutureDigiTechSummit to contact me about their events and other marketing updates from time to time. Also, FutureDigiTechSummit may share my details with carefully vetted third parties and other participants to improve the overall event experience.
+              I agree to allow Future DigiTech Summit to contact me about their events and other marketing updates from time to time. Also, Future DigiTech Summit may share my details with carefully vetted third parties and other participants to improve the overall event experience.
             </label>
           </div>
 

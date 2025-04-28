@@ -36,10 +36,11 @@ export default function RootLayout({
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-5J2CQFRF');
+            })(window,document,'script','dataLayer','GTM-TR35BNVH');
           `}
         </Script>
         {/* End Google Tag Manager */}
+
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -47,7 +48,7 @@ export default function RootLayout({
         {/* Google Tag Manager (noscript) - Immediately after opening body tag */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-5J2CQFRF"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TR35BNVH"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
@@ -55,8 +56,8 @@ export default function RootLayout({
         </noscript>
         {/* End Google Tag Manager (noscript) */}
 
-         {/* GTM noscript here */}
-         <AOSInit /> {/* 👈 initialize AOS here */}
+        {/* GTM noscript here */}
+        <AOSInit /> {/* 👈 initialize AOS here */}
 
         <Navbar />
         {children}

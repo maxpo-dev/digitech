@@ -155,7 +155,7 @@ export default function BrochureRequestPage() {
               <a href="/policy" className="text-blue-600 underline" target="_blank">
                 Terms & Conditions and Privacy Policy
               </a>{" "}
-              of FutureDigitechSummit.
+              of Future Digitech Summit.
             </label>
           </div>
 
@@ -169,8 +169,8 @@ export default function BrochureRequestPage() {
               required
             />
             <label className="text-lg text-gray-700">
-              I agree to allow FutureDigitechSummit to contact me about their events and other marketing updates from time to time.
-              FutureDigitechSummit may also share my details with carefully vetted third parties and other participants to improve the overall event experience.
+              I agree to allow Future Digitech Summit to contact me about their events and other marketing updates from time to time.
+              Future Digitech Summit may also share my details with carefully vetted third parties and other participants to improve the overall event experience.
             </label>
           </div>
 

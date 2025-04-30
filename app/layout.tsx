@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google Tag Manager - Paste as high in the head as possible */}
+        {/* Google Tag Manager */}
         <Script id="gtm-init" strategy="beforeInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -39,13 +39,25 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-TR35BNVH');
           `}
         </Script>
-        {/* End Google Tag Manager */}
 
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-LDYN5CD1P2"
+          strategy="afterInteractive"
+        />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-LDYN5CD1P2');
+          `}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Google Tag Manager (noscript) - Immediately after opening body tag */}
+        {/* GTM Noscript Fallback */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TR35BNVH"
@@ -54,11 +66,8 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
-        {/* End Google Tag Manager (noscript) */}
 
-        {/* GTM noscript here */}
-        <AOSInit /> {/* 👈 initialize AOS here */}
-
+        <AOSInit />
         <Navbar />
         {children}
         <Footer />

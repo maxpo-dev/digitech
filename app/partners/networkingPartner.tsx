@@ -1,6 +1,6 @@
 import Image from "next/image";
 import KissflowLogo from "@/public/images/partners/kissflow.png";
-import kraft from "@/public/images/partners/kraft2.jpg";
+import kraft from "@/public/images/partners/kraft.jpeg";
 import ConvergentDS from "@/public/images/partners/ConvergentDS.jpg";
 
 const NetworkingPartner: React.FC = () => {

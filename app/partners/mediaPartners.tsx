@@ -15,7 +15,7 @@ const mediaPartners = [
 const OurMediaPartners = () => {
   return (
     <div className="py-10 text-black ">
-      <h2 className="text-3xl font-bold text-center mb-16">Our Media Partners</h2>
+      <h3 className="text-3xl font-bold text-center mb-16">Our Media Partners</h3>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto ">
         {mediaPartners.map((partner) => (
           <a

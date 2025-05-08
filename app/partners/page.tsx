@@ -3,6 +3,7 @@ import OurMediaPartners from "./mediaPartners";
 import GovSupportingPartner from "./supportingPartner";
 import AssociationPartner from "./associationPartner";
 import NetworkingPartner from "./networkingPartner";
+import PlatinumPartner from "./PlatinumPartner";
 
 export default function PartnersPage() {
   return (
@@ -13,17 +14,33 @@ export default function PartnersPage() {
           <div className="bg-white rounded-3xl border border-gray-200 p-6 sm:p-10 shadow-md">
             <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-10">Our Partners</h2>
             <div className="grid grid-cols-1 gap-6 sm:gap-10">
-              {/* Government Supporting Partner */}
-              <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
+
+
+
+                              {/* Government Supporting Partner */}
+                              <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
                 <h3 className="text-xl font-semibold text-gray-700 mb-4">Government Supporting Partners</h3>
                 <GovSupportingPartner />
               </div>
+
+
+                            {/* Platinum Partner*/}
+                            <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
+                <h3 className="text-xl font-semibold text-gray-700 mb-4">Platinum Partner</h3>
+                <PlatinumPartner />
+              </div>
+
+
+
+            
 
               {/* Networking Partner */}
               <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
                 <h3 className="text-xl font-semibold text-gray-700 mb-4">Networking Partners</h3>
                 <NetworkingPartner />
               </div>
+
+
 
               {/* Association Partner */}
               <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">

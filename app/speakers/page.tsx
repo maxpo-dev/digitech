@@ -107,10 +107,10 @@ const speakers: Speaker[] = [
   },
   {
     name: "Aaron Lee",
-    jobTitle: "Group CIO",
-    organization: "ANKH Malaysia",
+    jobTitle: "CIO",
+    organization: "ANKH Group",
     imageUrl: img8,
-    bio: "Aaron Lee is the Group CIO at ANKH Malaysia.",
+    bio: "Aaron Lee is the CIO at ANKH Group.",
     social: {},
   },
   {

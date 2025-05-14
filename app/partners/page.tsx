@@ -14,37 +14,27 @@ export default function PartnersPage() {
           <div className="bg-white rounded-3xl border border-gray-200 p-6 sm:p-10 shadow-md">
             <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-10">Our Partners</h2>
             <div className="grid grid-cols-1 gap-6 sm:gap-10">
-
-
-
-                              {/* Government Supporting Partner */}
-                              <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
-                <h3 className="text-xl font-semibold text-gray-700 mb-4">Government Supporting Partners</h3>
-                <GovSupportingPartner />
-              </div>
-
-
-                            {/* Platinum Partner*/}
-                            <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
-                <h3 className="text-xl font-semibold text-gray-700 mb-4">Platinum Partner</h3>
+              {/* Platinum Partner */}
+              <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
+                <h3 className="text-xl sm:text-2xl font-serif text-gray-800 mb-6 pb-2 border-b border-gray-300 tracking-wide">Platinum Partners</h3>
                 <PlatinumPartner />
               </div>
 
-
-
-            
-
               {/* Networking Partner */}
               <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
-                <h3 className="text-xl font-semibold text-gray-700 mb-4">Networking Partners</h3>
+                <h3 className="text-xl sm:text-2xl font-serif text-gray-800 mb-6 pb-2 border-b border-gray-300 tracking-wide">Networking Partners</h3>
                 <NetworkingPartner />
               </div>
 
-
+              {/* Government Supporting Partner */}
+              <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
+                <h3 className="text-xl sm:text-2xl font-serif text-gray-800 mb-6 pb-2 border-b border-gray-300 tracking-wide">Supporting Partners</h3>
+                <GovSupportingPartner />
+              </div>
 
               {/* Association Partner */}
               <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
-                <h3 className="text-xl font-semibold text-gray-700 mb-4">Association Partner</h3>
+                <h3 className="text-xl sm:text-2xl font-serif text-gray-800 mb-6 pb-2 border-b border-gray-300 tracking-wide">Association Partners</h3>
                 <AssociationPartner />
               </div>
             </div>
@@ -80,7 +70,7 @@ export default function PartnersPage() {
         {/* Become a Partner Form */}
         <section data-aos="fade-up">
           <div className="bg-white rounded-3xl border border-gray-200 p-6 sm:p-10 shadow-md">
-            <h3 className="text-xl sm:text-2xl font-semibold text-gray-700 mb-6">Become a Partner</h3>
+            <h3 className="text-xl sm:text-2xl font-serif text-gray-800 mb-6 pb-2 border-b border-gray-300 tracking-wide">Become a Partner</h3>
             <PartnershipEnquiryForm />
           </div>
         </section>
@@ -113,7 +103,7 @@ export default function PartnersPage() {
                 },
               ].map((tech, index) => (
                 <div key={index} className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{tech.title}</h3>
+                  <h3 className="text-xl sm:text-2xl font-serif text-gray-800 mb-6 pb-2 border-b border-gray-300 tracking-wide">{tech.title}</h3>
                   <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm">
                     {tech.items.map((item, idx) => (
                       <li key={idx}>{item}</li>

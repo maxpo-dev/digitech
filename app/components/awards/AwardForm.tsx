@@ -31,6 +31,18 @@ const AwardForm: React.FC = () => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    // Basic validation
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.organization.trim() ||
+      !formData.nominationDetails.trim()
+    ) {
+      setMessage("Please fill in all the required fields.");
+      setIsSuccess(false);
+      return;
+    }
+
     // Check if terms are accepted
     if (!formData.acceptedTerms) {
       setMessage("Please accept the Terms and Conditions.");
@@ -41,8 +53,8 @@ const AwardForm: React.FC = () => {
     setSubmitting(true);
     setMessage("");
 
-    // Determine the API endpoint based on category
-    const endpoint = category === "industry" ? "/api/industry-leaders" : "/api/send-email";
+    const endpoint =
+      category === "industry" ? "/api/industry-leaders" : "/api/send-email";
 
     try {
       const response = await fetch(endpoint, {
@@ -113,6 +125,7 @@ const AwardForm: React.FC = () => {
               onChange={handleChange}
               className="border p-2 rounded"
               placeholder="Company / Individual Name"
+              required
             />
             <input
               id="email"
@@ -121,6 +134,7 @@ const AwardForm: React.FC = () => {
               className="border p-2 rounded"
               placeholder="Email"
               type="email"
+              required
             />
             <input
               id="organization"
@@ -128,6 +142,7 @@ const AwardForm: React.FC = () => {
               onChange={handleChange}
               className="border p-2 rounded"
               placeholder="Organization"
+              required
             />
           </div>
 
@@ -139,6 +154,7 @@ const AwardForm: React.FC = () => {
             className="w-full border p-2 rounded mt-2"
             placeholder="Brief Description, Key Innovations, Case Studies, etc."
             rows={4}
+            required
           />
 
           {/* Terms & Conditions Fields */}

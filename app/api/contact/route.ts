@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { MongoClient } from 'mongodb';
 import nodemailer from 'nodemailer';
+import clientPromise from '@/lib/mongodb';
 
 export async function POST(req: NextRequest) {
   try {
@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'Invalid email format' }, { status: 400 });
     }
 
-    const client = await new MongoClient(process.env.MONGODB_URI!).connect();
+    const client = await clientPromise;
     const db = client.db();
     const collection = db.collection('contacts');
 

@@ -11,30 +11,35 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
+    "@prisma/client": "^6.7.0",
     "aos": "^2.3.4",
     "framer-motion": "^12.8.2",
     "lucide-react": "^0.473.0",
+    "mongodb": "^6.16.0",
     "next": "^15.3.0",
     "next-sitemap": "^4.2.3",
-    "nodemailer": "^6.10.0",
+    "nodemailer": "^6.10.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
     "react-tsparticles": "^2.12.2",
-    "tsparticles": "^3.8.0"
+    "tsparticles": "^3.8.0",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/aos": "^3.0.7",
-    "@types/node": "^20",
+    "@types/mongodb": "^4.0.6",
+    "@types/node": "^20.17.47",
     "@types/nodemailer": "^6.4.17",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
     "autoprefixer": "^10.4.20",
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
     "postcss": "^8.5.3",
+    "prisma": "^6.7.0",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5"
+    "typescript": "^5.8.3"
   }
 }

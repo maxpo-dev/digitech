@@ -52,7 +52,7 @@ export default function Home() {
 
 
 
-      {/* Organizer Section */}
+      {/* Organizer Sections */}
       <section className="py-16 border-t border-gray-200 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-6 md:px-12 lg:px-20">
           <h2 className="text-4xl font-extrabold text-blue-900 mb-10 text-center">

@@ -1,92 +1,49 @@
-import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
-import clientPromise from '@/lib/mongodb';
+import { NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const {
-      name,
-      designation,
-      company,
-      email,
-      phone,
-      country,
-      interestedIn,
-      message,
-      termsAccepted,
-      marketingConsent,
-    } = body;
+    const { name, designation, company, email, country, phone, message ,interestedIn } = body;
 
-    if (!name || !email || !interestedIn || !message) {
-      return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
-    }
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      return NextResponse.json({ message: 'Invalid email format' }, { status: 400 });
-    }
-
-    const client = await clientPromise;
-    const db = client.db();
-    const collection = db.collection('contacts');
-
-    await collection.insertOne({
-      name,
-      designation: designation || null,
-      company: company || null,
-      email,
-      phone: phone || null,
-      country: country || null,
-      interestedIn,
-      message,
-      termsAccepted: Boolean(termsAccepted),
-      marketingConsent: Boolean(marketingConsent),
-      createdAt: new Date(),
-      updatedAt: new Date(),
+    // Configure Nodemailer transport
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: "chvamshi03@gmail.com", // Your email address
+        pass: 'zfie hmte iyxt wyto', // Your email password or app password
+      },
     });
 
-    // Respond to client FIRST
-    const response = NextResponse.json({ message: 'Enquiry submitted successfully' }, { status: 200 });
+    // Email content
+    const mailOptions = {
+        from: "Digitech<chvamshi03@gmail.com>",
+        to: "info@tasconmedia.com, tarannum.s@tasconmedia.com, digital.maxpo@gmail.com, digital.maxpo@gmail.com, praveen.maxpo@gmail.com,askarali.maxpo@gmail.com",
+             
+       
 
-    // Send email in background
-    (async () => {
-      try {
-        const transporter = nodemailer.createTransport({
-          service: 'gmail',
-          auth: {
-            user: process.env.SMTP_USER,
-            pass: process.env.SMTP_PASSWORD,
-          },
-        });
+        subject: "New Enquiry from DIGITECH Contact Form",
+        html: `
+          <h1>New Enquiry</h1>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Designation:</strong> ${designation}</p>
+          <p><strong>Company:</strong> ${company}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Country:</strong> ${country}</p>
+          <p><strong>Phone:</strong> ${phone}</p>
+          <p><strong>interestedIn:</strong> ${interestedIn}</p>
+          <p><strong>Message:</strong></p>
+          <p>${message}</p>
+        `,
+    };
 
-        await transporter.sendMail({
-          from: process.env.SMTP_FROM_EMAIL || 'Digitech <chvamshi03@gmail.com>',
-          to: process.env.SMTP_USER,
-          bcc: process.env.SMTP_TO_EMAIL?.split(',').map(email => email.trim()),
-          subject: 'New Enquiry from DIGITECH Contact Form',
-          html: `
-            <h1>New Enquiry</h1>
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Designation:</strong> ${designation || 'N/A'}</p>
-            <p><strong>Company:</strong> ${company || 'N/A'}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Phone:</strong> ${phone || 'N/A'}</p>
-            <p><strong>Country:</strong> ${country || 'N/A'}</p>
-            <p><strong>Interested In:</strong> ${interestedIn}</p>
-            <p><strong>Message:</strong> ${message}</p>
-            <p><strong>Terms Accepted:</strong> ${termsAccepted ? 'Yes' : 'No'}</p>
-            <p><strong>Marketing Consent:</strong> ${marketingConsent ? 'Yes' : 'No'}</p>
-          `,
-        });
-      } catch (error) {
-        console.error('Email sending failed:', error);
-      }
-    })();
+    // Send email
+    await transporter.sendMail(mailOptions);
 
-    return response;
-
+    return NextResponse.json({ message: "Booking submitted successfully and email sent!" }, { status: 200 });
   } catch (error) {
-    console.error('Error submitting contact form:', error);
-    return NextResponse.json({ message: 'Server error. Try again later.' }, { status: 500 });
+    console.error("Error:", error);
+    return NextResponse.json({ message: "Failed to submit booking or send email." }, { status: 500 });
   }
 }

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { MongoClient } from 'mongodb';
+import clientPromise from '@/lib/mongodb';
 import nodemailer from 'nodemailer';
 
 export async function POST(req: NextRequest) {
@@ -28,9 +28,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'Invalid email format' }, { status: 400 });
     }
 
-    // Save to MongoDB using native driver
-    const client = await new MongoClient(process.env.MONGODB_URI as string).connect();
-    const db = client.db(); // uses DB name in connection string
+    // Connect to MongoDB
+    const client = await clientPromise;
+    const db = client.db();
     const collection = db.collection('contacts');
 
     await collection.insertOne({
@@ -48,7 +48,10 @@ export async function POST(req: NextRequest) {
       updatedAt: new Date(),
     });
 
-    // Send email with Nodemailer
+    // Send response early
+    const response = NextResponse.json({ message: 'Enquiry submitted' }, { status: 200 });
+
+    // Send email in background
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -57,10 +60,10 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    await transporter.sendMail({
+    transporter.sendMail({
       from: process.env.SMTP_FROM_EMAIL || 'Digitech <chvamshi03@gmail.com>',
-      to: process.env.SMTP_USER, // send to your own inbox
-      bcc: process.env.SMTP_TO_EMAIL?.split(',').map(email => email.trim()), // blind copy others
+      to: process.env.SMTP_USER,
+      bcc: process.env.SMTP_TO_EMAIL?.split(',').map(email => email.trim()),
       subject: 'New Enquiry from DIGITECH Contact Form',
       html: `
         <h1>New Enquiry</h1>
@@ -75,9 +78,10 @@ export async function POST(req: NextRequest) {
         <p><strong>Terms Accepted:</strong> ${termsAccepted ? 'Yes' : 'No'}</p>
         <p><strong>Marketing Consent:</strong> ${marketingConsent ? 'Yes' : 'No'}</p>
       `,
-    });
+    }).catch(err => console.error('Email send failed:', err));
 
-    return NextResponse.json({ message: 'Enquiry submitted and email sent' }, { status: 200 });
+    return response;
+
   } catch (error) {
     console.error('Error:', error);
     return NextResponse.json({ message: 'Failed to submit enquiry or send email' }, { status: 500 });

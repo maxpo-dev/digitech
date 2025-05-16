@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/contact/route.ts": {
+    "app/api/contact/route.ts": {
       "maxDuration": 20
     }
   },

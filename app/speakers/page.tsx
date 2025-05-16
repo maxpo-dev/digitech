@@ -21,6 +21,10 @@ import img16 from '@/public/images/speakers/Ts.Izzat.jpg'
 import img17 from '@/public/images/speakers/Ts Tengku.jpg'
 import img18 from '@/public/images/speakers/Farouk Abdullah.jpg'
 import img19 from '@/public/images/speakers/Artboard 7(1).jpg'
+import img20 from '@/public/images/speakers/Artboard 11.jpg'
+import img21 from '@/public/images/speakers/Artboard 8.jpg'
+import img22 from '@/public/images/speakers/Artboard 10.jpg'
+import img23 from '@/public/images/speakers/Artboard 9.jpg'
 
 
 
@@ -193,6 +197,39 @@ const speakers: Speaker[] = [
     bio: "Farouk Abdullah is a Chief Digital Officer at KHIND Malaysia.",
     social: {},
   },
+    {
+    name: "Akshay Moradiya",
+    jobTitle: "Channel and Alliance Head",
+    organization: " Motadata",
+    imageUrl: img20,
+    bio: "Akshay Moradiya is a Channel and Alliance Head.",
+    social: {},
+  },
+      {
+    name: "Vishal Vankar",
+    jobTitle: "Regional sales head",
+    organization: "Motadata",
+    imageUrl: img21,
+    bio: "Vishal Vankar is a Regional sales head.",
+    social: {},
+  },
+        {
+    name: "Mohd Zabri Adil Bin Talib",
+    jobTitle: "General Manager, Responsive Technology & Services",
+    organization: "CyberSecurity Malaysia",
+    imageUrl: img22,
+    bio: "Mohd Zabri Adil Bin Talib is a General Manager, Responsive Technology & Services.",
+    social: {},
+  },
+        {
+    name: "Yuen Chee Lung",
+    jobTitle: "CISO",
+    organization: "AIA Bhd",
+    imageUrl: img23,
+    bio: "Yuen Chee Lung is a CISO.",
+    social: {},
+  },
+
  
 
 ]

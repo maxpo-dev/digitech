@@ -25,6 +25,8 @@ import img20 from '@/public/images/speakers/Artboard 11.jpg'
 import img21 from '@/public/images/speakers/Artboard 8.jpg'
 import img22 from '@/public/images/speakers/Artboard 10.jpg'
 import img23 from '@/public/images/speakers/Artboard 9.jpg'
+import img24 from '@/public/images/speakers/Irsyad.jpg'
+import img25 from '@/public/images/speakers/hamed.jpg'
 
 
 
@@ -229,6 +231,23 @@ const speakers: Speaker[] = [
     bio: "Yuen Chee Lung is a CISO.",
     social: {},
   },
+          {
+    name: "Irsyad Saidin",
+    jobTitle: " Product Head & Blockchain Research Lead",
+    organization: "MX Global",
+    imageUrl: img24,
+    bio: "Irsyad Saidin is a Product Head & Blockchain Research Lead.",
+    social: {},
+  },
+            {
+    name: "Prof. Dr. Hamed Faghiri",
+    jobTitle: " Founder and CEO",
+    organization: " Dorod Group Berhad",
+    imageUrl: img25,
+    bio: "Prof. Dr. Hamed Faghiri is a Founder and CEO.",
+    social: {},
+  },
+
 
  
 

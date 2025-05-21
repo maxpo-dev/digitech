@@ -121,7 +121,7 @@ export default function Home() {
       <section className="py-20 text-center bg-gradient-to-r from-blue-100 via-purple-50 to-purple-100 rounded-2xl shadow-xl mt-16 mx-auto max-w-5xl">
         <div className="px-6 md:px-12">
           <h2 className="text-5xl font-extrabold text-blue-900 mb-6">
-            Ready to Shape the Future?
+            Ready to Shape the Future ..?
           </h2>
           <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed">
             Don&apos;t miss this opportunity to be part of the most innovative tech summit of the year. Secure your spot now and join the pioneers shaping tomorrow!

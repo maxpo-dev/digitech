@@ -27,6 +27,8 @@ import img22 from '@/public/images/speakers/Artboard 10.jpg'
 import img23 from '@/public/images/speakers/Artboard 9.jpg'
 import img24 from '@/public/images/speakers/Irsyad.jpg'
 import img25 from '@/public/images/speakers/hamed.jpg'
+import img26 from '@/public/images/speakers/Artboard 15.jpg'
+import img27 from '@/public/images/speakers/Artboard 14.jpg'
 
 
 
@@ -247,6 +249,23 @@ const speakers: Speaker[] = [
     bio: "Prof. Dr. Hamed Faghiri is a Founder and CEO.",
     social: {},
   },
+              {
+    name: "Budiman Bujang",
+    jobTitle: "Chief Digital Officer",
+    organization: "Johor Corporation",
+    imageUrl: img26,
+    bio: "Budiman Bujang is a Chief Digital Officer.",
+    social: {},
+  },
+{
+  name: "Hasan Ganny Bin Hanif Francis",
+  jobTitle: "Executive Committee, IASA Asia Pacific,Chairman",
+  organization: " Association of Enterprise Architects (Malaysia Chapter)",
+  imageUrl: img27,
+  bio: "Hasan Ganny Bin Hanif Francis serves on the Executive Committee of IASA Asia Pacific and is the Chairman of the Association of Enterprise Architects (Malaysia Chapter).",
+  social: {},
+}
+
 
 
  

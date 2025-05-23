@@ -4,6 +4,7 @@ import GovSupportingPartner from "./supportingPartner";
 import AssociationPartner from "./associationPartner";
 import NetworkingPartner from "./networkingPartner";
 import PlatinumPartner from "./PlatinumPartner";
+import GoldPartner from "./goldPartner";
 
 export default function PartnersPage() {
   return (
@@ -20,11 +21,19 @@ export default function PartnersPage() {
                 <PlatinumPartner />
               </div>
 
+                                          {/* Gold Partner */}
+              <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
+                <h3 className="text-xl sm:text-2xl font-serif text-gray-800 mb-6 pb-2 border-b border-gray-300 tracking-wide">Gold Partner</h3>
+                <GoldPartner />
+              </div>
+
               {/* Networking Partner */}
               <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
                 <h3 className="text-xl sm:text-2xl font-serif text-gray-800 mb-6 pb-2 border-b border-gray-300 tracking-wide">Networking Partners</h3>
                 <NetworkingPartner />
               </div>
+
+
 
               {/* Government Supporting Partner */}
               <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
@@ -34,7 +43,7 @@ export default function PartnersPage() {
 
               {/* Association Partner */}
               <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center min-h-[360px]">
-                <h3 className="text-xl sm:text-2xl font-serif text-gray-800 mb-6 pb-2 border-b border-gray-300 tracking-wide">Association Partners</h3>
+                <h3 className="text-xl sm:text-2xl font-serif text-gray-800 mb-6 pb-2 border-b border-gray-300 tracking-wide">Association Partner</h3>
                 <AssociationPartner />
               </div>
             </div>

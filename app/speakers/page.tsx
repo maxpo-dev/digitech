@@ -251,7 +251,7 @@ const speakers: Speaker[] = [
   },
               {
     name: "Budiman Bujang",
-    jobTitle: "Chief Digital Officer",
+    jobTitle: "Deputy Chief Digital Officer",
     organization: "Johor Corporation",
     imageUrl: img26,
     bio: "Budiman Bujang is a Chief Digital Officer.",
